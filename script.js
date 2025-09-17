@@ -11,7 +11,7 @@ function updateClock(){
 
     let SecRotate = (360 / 60) * CurrSec;
     let MinRotate = ((360/60) * CurrMin) + CurrSec;
-    let HourRotate = (360 / 12) * CurrHours  + CurrMin + 0.5;
+    let HourRotate = (30 * CurrHours + (CurrMin / 60) * 30) + 90;
 
   seconds.style.transform = `rotate(${SecRotate}deg)`;
   minutes.style.transform = `rotate(${MinRotate}deg)`;
